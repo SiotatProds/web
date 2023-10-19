@@ -1,0 +1,18 @@
+<div class="labWrapper">
+
+  <p class="title-page">
+    En Siotat Prods nos gusta crear proyectos propios. Cortometrajes y documentales que están por estrenar... ¡Y también nuestras propias sesiones de música electrónica en una auténtica cueva granadina!
+    <br><br>
+    En <a (click)="openLink('https://www.youtube.com/@TheCaveMusicSessions')">The Cave Music Sessions</a> damos rienda suelta a experimentar, mezclando dos formatos como el cine y unas music sessions.
+  </p>
+
+  <div class="video-container">
+    <youtube-player
+      *ngFor="let video of youtubeUrls"
+      [videoId]="video"
+      suggestedQuality="highres"
+      [height]="isMobile ? 160 : 160"
+      [width]="isMobile ? 300 : 300">
+    </youtube-player>
+  </div>
+</div>

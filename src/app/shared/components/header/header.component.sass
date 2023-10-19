@@ -1,0 +1,57 @@
+.parent
+	display: grid
+	grid-template-columns: repeat(5, 1fr)
+	grid-template-rows: repeat(5, 1fr)
+	grid-column-gap: 0px
+	grid-row-gap: 0px
+
+
+.navbar
+	grid-area: 3 / 1 / 4 / 6
+	display: flex
+	justify-content: space-around
+	font-size: 28px
+	@media (max-width: 550px)
+		font-size: 20px
+	a
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: 0
+			height: 2px
+			width: 100%
+			background-color: black
+			transform: translateX(-50%) scaleX(0)
+			transform-origin: center
+			transition: transform 0.1s ease-out
+		&:hover::after
+			transform: translateX(-50%) scaleX(1)
+		&.active
+			&::after
+				content: ''
+				position: absolute
+				left: 50%
+				bottom: 0
+				height: 2px
+				width: 100%
+				background-color: black
+				transform: translateX(-50%) scaleX(1)
+				transform-origin: center
+
+.imageOverlapped
+	position: absolute
+	z-index: 99
+	top: 3px
+	@media (max-width: 550px)
+		top: 35px
+	left: 0
+	width: 100%
+	display: flex
+	justify-content: center
+	opacity: 60%
+	img
+		height: 125px
+		@media (max-width: 550px)
+			height: 16vw

@@ -1,0 +1,17 @@
+img
+  height: 125px
+  object-fit: cover
+
+.container
+    overflow: hidden
+.image-container
+  display: inline-block
+  white-space: nowrap
+  animation: marquee 20s linear infinite
+
+@keyframes marquee
+  0%
+    transform: translateX(0)
+
+  100%
+    transform: translateX(-50%)

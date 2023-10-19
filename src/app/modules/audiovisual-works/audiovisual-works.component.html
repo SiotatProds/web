@@ -1,0 +1,14 @@
+<div class="labWrapper">
+  <p class="title-page">
+    En Siotat Prods trabajamos en muchos tipos de proyectos audiovisuales. Cine,videoclips, videos para youtubers, anuncios, congresos...
+    ¡Contáctanos para más info!
+  </p>
+
+  <youtube-player
+    *ngFor="let video of youtubeUrls"
+    [videoId]="video"
+    suggestedQuality="highres"
+    [height]="isMobile ? 160 : 300"
+    [width]="isMobile ? 300 : 750">
+  </youtube-player>
+</div>

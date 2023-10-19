@@ -1,0 +1,41 @@
+.footer-wrapper
+  display: flex
+  justify-content: center
+  padding: 40px
+  padding-bottom: 0px
+  @media (max-width: 550px)
+    padding: 0
+  span
+    font-size: 36px
+
+.brands
+  display: flex
+  justify-content: space-between
+  text-decoration: none
+  .social-container
+    position: relative
+    display: inline-block
+    .youtube
+      width: 56px
+    img
+      cursor: pointer
+      height: 45px
+      display: inline-block
+      position: relative
+    img::before
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 50%
+      width: 0
+      height: 2px
+      background-color: #000
+      transition: width 0.3s ease
+    img:hover::before
+      width: 100%
+      left: 0
+
+
+@media (max-width: 550px)
+  .footer-wrapper
+    padding: 0

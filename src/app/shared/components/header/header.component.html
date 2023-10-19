@@ -1,0 +1,12 @@
+<div class="imageOverlapped">
+  <img src="assets/img/logos/logo_white.png" alt="MainLogo">
+</div>
+<app-carousel class="carousel"></app-carousel>
+<div class="navbar">
+  <a
+    *ngFor="let tab of routes"
+    [ngClass]="{ 'active': tab.url === router.url }"
+    class="pointer"
+    (click)="navigate(tab.url)"
+  > {{tab.name}} </a>
+</div>
