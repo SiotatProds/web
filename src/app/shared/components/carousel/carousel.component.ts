@@ -9,11 +9,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class CarouselComponent {
 
     public images: string[] = [
-        'assets/img/horizontal/workingImage1.png',
-        'assets/img/horizontal/workingImage2.png',
-        'assets/img/horizontal/workingImage3.png',
-        'assets/img/horizontal/workingImage4.png',
-        'assets/img/horizontal/workingImage5.png',
+        'assets/img/horizontal/workingImage1.jpg',
+        'assets/img/horizontal/workingImage2.jpg',
+        'assets/img/horizontal/workingImage3.jpg',
+        'assets/img/horizontal/workingImage4.jpg',
+        'assets/img/horizontal/workingImage5.jpg',
     ];
 
 }
