@@ -1,10 +1,15 @@
-<div class="labWrapper">
+<div class="lab-wrapper">
   <p class="title-page">
     En Siotat Prods trabajamos en muchos tipos de proyectos audiovisuales. Cine,videoclips, videos para youtubers, anuncios, congresos...
     ¡Contáctanos para más info!
   </p>
 
+  <div class="spinner-container">
+    <div class="spinner" [hidden]="!showSpinner"></div>
+  </div>
+
   <youtube-player
+    [ngStyle]="{ 'display': showSpinner ? 'none' : 'block' }"
     *ngFor="let video of youtubeUrls"
     [videoId]="video"
     suggestedQuality="highres"

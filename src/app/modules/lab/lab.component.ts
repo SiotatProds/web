@@ -10,6 +10,7 @@ export class LabComponent {
 
   public youtubeUrls: string[];
   public isMobile: boolean;
+  public showSpinner: boolean;
 
   constructor() {
     this.isMobile = UtilsService.isMobileDevice();
@@ -20,7 +21,13 @@ export class LabComponent {
       'ej_SyLOqF9E',
       '-T0riE5DpDA'
     ];
+    this.showSpinner = false;
+    setTimeout(() => {
+      this.showSpinner = true;
+      setTimeout(() => this.showSpinner = false, 4000);
+    }, 1000);
   }
+
   public openLink(link: string): void {
     window.open(link);
   }

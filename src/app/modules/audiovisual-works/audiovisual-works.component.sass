@@ -1,4 +1,4 @@
-.labWrapper
+.lab-wrapper
   color: black
   display: flex
   flex-wrap: wrap
@@ -11,3 +11,21 @@
     padding: 0 10px
     @media (max-width: 550px)
       font-size: 18px
+
+.spinner-container
+  height: 100%
+  .spinner
+    margin-top: 25px
+    border: 4px solid rgba(0, 0, 0, 0.1)
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    border-left-color: black
+    animation: spin 1s ease infinite
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)

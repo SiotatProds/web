@@ -6,9 +6,14 @@
     En <a (click)="openLink('https://www.youtube.com/@TheCaveMusicSessions')">The Cave Music Sessions</a> damos rienda suelta a experimentar, mezclando dos formatos como el cine y unas music sessions.
   </p>
 
+  <div class="spinner-container">
+    <div class="spinner" [hidden]="!showSpinner"></div>
+  </div>
+
   <div class="video-container">
     <youtube-player
       *ngFor="let video of youtubeUrls"
+      [ngStyle]="{ 'display': showSpinner ? 'none' : 'block' }"
       [videoId]="video"
       suggestedQuality="highres"
       [height]="isMobile ? 160 : 160"

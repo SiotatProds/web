@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UtilsService } from 'src/app/shared/services/utils.service';
 
 @Component({
@@ -6,13 +6,19 @@ import { UtilsService } from 'src/app/shared/services/utils.service';
   templateUrl: './audiovisual-works.component.html',
   styleUrls: ['./audiovisual-works.component.sass']
 })
-export class AudiovisualWorksComponent {
+export class AudiovisualWorksComponent implements OnInit {
 
   public youtubeUrls: string[]
   public isMobile: boolean;
+  public showSpinner: boolean;
 
   constructor() {
     this.isMobile = UtilsService.isMobileDevice();
+    this.showSpinner = false;
+    setTimeout(() => {
+      this.showSpinner = true;
+      setTimeout(() => this.showSpinner = false, 4000);
+    }, 1000);
     const urls = [
       'SBPiRH78IlA',
       'hRHNjIt_kTs',
@@ -39,5 +45,8 @@ export class AudiovisualWorksComponent {
       'yMlzRdTRq_A'
     ];
     this.youtubeUrls = urls.sort(() => Math.random() - 0.5);
+  }
+
+  ngOnInit() {
   }
 }
