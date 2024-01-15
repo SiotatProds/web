@@ -18,7 +18,7 @@ export class AudiovisualWorksComponent implements OnInit {
     setTimeout(() => {
       this.showSpinner = true;
       setTimeout(() => this.showSpinner = false, 4000);
-    }, 1000);
+    }, 300);
     const urls = [
       'SBPiRH78IlA',
       'hRHNjIt_kTs',

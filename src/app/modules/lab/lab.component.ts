@@ -25,7 +25,7 @@ export class LabComponent {
     setTimeout(() => {
       this.showSpinner = true;
       setTimeout(() => this.showSpinner = false, 4000);
-    }, 1000);
+    }, 300);
   }
 
   public openLink(link: string): void {
